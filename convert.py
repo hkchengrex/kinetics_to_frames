@@ -12,9 +12,9 @@ Argument parsing
 parser = ArgumentParser()
 parser.add_argument('--in_path', help='Path to a folder of folders of videos')
 parser.add_argument('--out_path', help='Will maintain the same structure as the input')
-parser.add_argument('-n', '--num_processes', default=8)
-parser.add_argument('--new_min_size', help='Resize the min size to this. -1 to keep the original size.', default=224)
-parser.add_argument('--sample_rate', help='Save every nth frame', default=5)
+parser.add_argument('-n', '--num_processes', default=8, type=int)
+parser.add_argument('--new_min_size', help='Resize the min size to this. -1 to keep the original size.', default=224, type=int)
+parser.add_argument('--sample_rate', help='Save every nth frame', default=5, type=int)
 
 args = parser.parse_args()
 
